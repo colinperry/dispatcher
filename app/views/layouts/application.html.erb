@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dispatch</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Molengo|Glegoo|Carme' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+	<header>
+		<nav>
+				<div>
+					<%= link_to 'sign up' %>
+				</div>
+				<div>
+					<%= link_to 'sign in' %>
+				</div>
+		</nav>
+	</header>
+<body>
+
+<%= yield %>
+
+	<footer>
+		<ul>
+			<li>
+					<p>Help Center</p>
+				</li>
+				<li>
+					<p>About</p>
+				</li>
+			<li>
+					<p>Careers</p>
+				</li>
+				<li>
+					<p>Press</p>
+				</li>
+				<li>
+					<p>Be A Professional</p>
+				</li>
+				<li>
+					<p>Blog</p>
+				</li>
+				<li>
+					<p>Contact</p>
+				</li>
+		</ul>
+	</footer>
+
+</body>
+	
+</html>
