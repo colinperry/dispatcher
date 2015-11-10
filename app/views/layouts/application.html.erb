@@ -5,52 +5,66 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dispatch</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Molengo|Glegoo|Carme' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 	<header>
 		<nav>
-				<div>
-					<%= link_to 'sign up' %>
+			<% if current_user %>
+				<span>Hello <%= current_user.email %></span>
+				<div class="nav_button">
+					<%= link_to 'sign out', destroy_user_session_path, method: :delete %>
 				</div>
-				<div>
-					<%= link_to 'sign in' %>
+			<% else %>
+				<div class="nav_button">
+					<%= link_to 'sign up', new_user_registration_path %>
 				</div>
+				<div class="nav_button">
+					<%= link_to 'sign in', new_user_session_path %>
+				</div>
+			<% end %>
 		</nav>
 	</header>
+
 <body>
+
+	<script>
+	  window.fbAsyncInit = function() {
+	    FB.init({
+	      appId      : '1697293397180577',
+	      xfbml      : true,
+	      version    : 'v2.5'
+	    });
+	  };
+
+	  (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement(s); js.id = id;
+	     js.src = "//connect.facebook.net/en_US/sdk.js";
+	     fjs.parentNode.insertBefore(js, fjs);
+	   }(document, 'script', 'facebook-jssdk'));
+	</script>	
 
 <%= yield %>
 
-	<footer>
-		<ul>
-			<li>
-					<p>Help Center</p>
-				</li>
-				<li>
-					<p>About</p>
-				</li>
-			<li>
-					<p>Careers</p>
-				</li>
-				<li>
-					<p>Press</p>
-				</li>
-				<li>
-					<p>Be A Professional</p>
-				</li>
-				<li>
-					<p>Blog</p>
-				</li>
-				<li>
-					<p>Contact</p>
-				</li>
-		</ul>
-	</footer>
-
 </body>
+
+<footer>
+	<div class="links_list" >
+		<p>Help Center</p>
+		<p>About</p>
+		<p>Careers</p>
+		<p>Press</p>
+		<p>Partners</p>
+		<p>Blog</p>
+		<p>Contact</p>
+	</div>
+</footer>
+
+
 	
 </html>
