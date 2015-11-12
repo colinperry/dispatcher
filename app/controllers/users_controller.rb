@@ -22,7 +22,7 @@ def profile
 end
 
 def create
-
+	@user = User.create( user_params )
 end
 
 def update
@@ -48,8 +48,12 @@ end
 
 private
 
+def user_params
+  params.require(:user).permit(:avatar)
+end
+
 def additional_params
-	params.require(:user).permit(:username, :address, :bio, :is_rn)
+	params.require(:user).permit(:username, :address, :bio, :is_rn, :fname, :lname)
 end
 
 

@@ -23,52 +23,63 @@ body{
 	margin: 0;
 	margin-top: 0;
 	font-family: 'Molengo';
-	background-image: url("Registered-Nurse.jpg");
+	background-image: url("Registered-Nurse3.jpg");
+	background-color: black;
+	background-repeat: no-repeat;
 	background-size: 100%;
 	height: 600px;
 }
 
 header{
-	height: 100px;
-	background-color: #72E88C;
+	height: 90px;
+	background-color: #3BE3FF;
+	// background-color: #66C7D9;
 }
 
-nav{
+.logo{
+	margin-right: 0px;
+	margin-left: 600px;
+	font-family: 'Molengo';
+	margin-top: -20px;
+	position: absolute;
+	font-size: 1.8em;
+	color: white;
 }
 
-nav span{
-	margin-top: 45px;
-	margin-left: 20px;
-}
-
-nav div {
+.nav_button a{
 	display: inline-block;
 	float: right;
 	margin-right: 3em;
 	margin-top: 20px;
 	font-size: 1em;
-	border: 1px solid black;
 	height: 40px;
 	width: 100px;
 	font-family: 'Molengo';
-	padding-left: 35px;
-	padding-bottom: 0px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
 	text-decoration: none;
+	text-align: center;
+	color: white;
+	background-color: #3BE3FF;
+	border: 1px solid white;
 	font-size: 1.5em;
+	text-decoration: none;
+	border-radius: 5px;
 }
 
-.nav_button{
-	text-decoration: none;
-	background-color: white;
+.nav_button a:hover {
+border-color:black;
 }
 
 footer{
 	height: 280px;
-	background-color: #FFF36A;
+	background-color: #3BE3FF;
 	font-family: 'Molengo';
 	padding-top: 10px;
 	padding-left: 40px;
-	margin-top: 500px;
+	margin-top: 0px;
+	color: white;
 }
 
 footer ul li{
@@ -85,4 +96,45 @@ margin-bottom: 50px;
 /*	border: 1px solid black;
 */	margin-left: 600px;
 margin-bottom: 50px;
+}
+
+.tagline{
+	margin-top: 250px;
+	font-size: 2em;
+	text-align: center;
+	color: white;
+	// -webkit-text-stroke: 1px #D2D2D2;
+}
+
+.signups{
+	height: 100px;
+	width: 625px;
+	// background-color: white;
+	margin-left: 410px;
+	margin-bottom: 40px;
+	margin-top: 50px;
+	// border: 1px solid black;
+}
+
+.signup{
+	height: 100px;
+	width: 250px;
+	font-family: 'Molengo';
+	background-color: black;
+	font-size: 1.25em;
+	display: inline;
+	border: 1px solid black;
+	float: left;
+	margin-right: 20px;
+	margin-left: 20px;
+	text-align: center;
+	padding-right: 0.5em;
+	padding-left: 0.5em;
+	border-radius: 5px;
+	color: white;
+}
+
+.signup:hover {
+	// color: #3BE3FF;
+ //  border-color: white;
 }

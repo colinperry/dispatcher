@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dispatch</title>
+  <title>Dispatcher</title>
   <link href='https://fonts.googleapis.com/css?family=Molengo|Glegoo|Carme' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -14,8 +14,7 @@
 	<header>
 		<nav>
 			<% if current_user %>
-				<span>Hello <%= current_user.email %></span>
-				<div class="nav_button">
+ 				<div class="nav_button">
 					<%= link_to 'sign out', destroy_user_session_path, method: :delete %>
 				</div>
 			<% else %>
@@ -26,31 +25,33 @@
 					<%= link_to 'sign in', new_user_session_path %>
 				</div>
 			<% end %>
+			<div class="logo">
+				<h1> Dispatcher </h1>
+			</div>
 		</nav>
 	</header>
 
 <body>
+	<div class="background_image">
+			<script>
+			  window.fbAsyncInit = function() {
+			    FB.init({
+			      appId      : '1697293397180577',
+			      xfbml      : true,
+			      version    : 'v2.5'
+			    });
+			  };
 
-	<script>
-	  window.fbAsyncInit = function() {
-	    FB.init({
-	      appId      : '1697293397180577',
-	      xfbml      : true,
-	      version    : 'v2.5'
-	    });
-	  };
-
-	  (function(d, s, id){
-	     var js, fjs = d.getElementsByTagName(s)[0];
-	     if (d.getElementById(id)) {return;}
-	     js = d.createElement(s); js.id = id;
-	     js.src = "//connect.facebook.net/en_US/sdk.js";
-	     fjs.parentNode.insertBefore(js, fjs);
-	   }(document, 'script', 'facebook-jssdk'));
-	</script>	
-
-<%= yield %>
-
+			  (function(d, s, id){
+			     var js, fjs = d.getElementsByTagName(s)[0];
+			     if (d.getElementById(id)) {return;}
+			     js = d.createElement(s); js.id = id;
+			     js.src = "//connect.facebook.net/en_US/sdk.js";
+			     fjs.parentNode.insertBefore(js, fjs);
+			   }(document, 'script', 'facebook-jssdk'));
+			</script>	
+		<%= yield %>
+	</div>
 </body>
 
 <footer>
@@ -64,7 +65,5 @@
 		<p>Contact</p>
 	</div>
 </footer>
-
-
 	
 </html>
