@@ -1,6 +1,20 @@
-<% for nurse in @local_nurses do %>
-	<%= nurse.email %>
-	<%= nurse.address %>
-	<%= nurse.fname %>
-	<%= nurse.lname %>
-<% end %>
+<div class="nurse_view">
+	<h1>Registered Nurses located within 5 miles of your home address:</h1>
+		<% for nurse in @local_nurses do %>
+			<div class="nurse_display">
+				<div class="nurse_display_avatar">
+					<% if nurse.avatar.url(:thumb) %>
+						<%= image_tag nurse.avatar.url(:thumb) %>
+					<% else %>
+						<img src=url("default_avatar_female.jpg")>
+					<% end %>
+				</div>
+				<div class="nurse_display_fname" %>
+					<%= nurse.fname %>
+				</div>
+				<div class="nurse_display_email">
+					<%= nurse.email %>
+				</div>
+			</div>
+		<% end %>
+</div>
