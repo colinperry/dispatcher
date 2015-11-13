@@ -33,7 +33,6 @@ body{
 header{
 	height: 90px;
 	background-color: #3BE3FF;
-	// background-color: #66C7D9;
 }
 
 .logo{
@@ -58,7 +57,6 @@ header{
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 10px;
-	text-decoration: none;
 	text-align: center;
 	color: white;
 	background-color: #3BE3FF;
@@ -69,7 +67,7 @@ header{
 }
 
 .nav_button a:hover {
-border-color:black;
+	border-color:black;
 }
 
 footer{
@@ -82,20 +80,73 @@ footer{
 	color: white;
 }
 
-footer ul li{
-	list-style-type: none;
+footer div p a{
+	text-decoration: none;
+	color: white;
+}
+
+footer div p a:hover{
+	text-decoration: underline;
+}
+
+.signup_form_container{
+	// border: 1px solid black;
+	margin-left: 225px;
+	margin-bottom: 50px;
+	background-color: white;
+	margin-top: 150px;
+	width: 925px;
+	border-radius: 5px;
 }
 
 .signup_form{
-/*	border: 1px solid black;
-*/	margin-left: 600px;
-margin-bottom: 50px;
+	border-radius: 10px;
+	margin-left: 0px;
+	text-align: center;
+	width: 925;
+	background-color: white;
+	padding: 5px;
+}
+
+.sign_in_form_container{
+	// border: 1px solid black;
+	margin-left: 225px;
+	margin-bottom: 50px;
+	background-color: white;
+	margin-top: 150px;
+	width: 925px;
+	border-radius: 5px;
 }
 
 .sign_in_form{
-/*	border: 1px solid black;
-*/	margin-left: 600px;
-margin-bottom: 50px;
+	border-radius: 10px;
+	margin-left: 0px;
+	text-align: center;
+	width: 925;
+	background-color: white;
+	padding: 5px;
+}
+
+.form_field{
+	width: 800px;
+	height: 40px;
+	font-size: 1em;
+	text-align: center;
+	border: 1px solid black;
+}
+
+.submit_button{
+	width: 800px;
+	height: 60px;
+	padding: 20px;
+	border: 1px solid black;
+	background-color: white;
+	font-size: 1em;
+}
+
+.submit_button:hover{
+	background-color: #3BE3FF;
+	border: none;
 }
 
 .tagline{
@@ -130,7 +181,7 @@ margin-bottom: 50px;
 	text-align: center;
 	padding-right: 0.5em;
 	padding-left: 0.5em;
-	border-radius: 5px;
+	border-radius: 2px;
 	color: white;
 }
 
