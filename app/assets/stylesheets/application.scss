@@ -62,7 +62,7 @@ header{
 	padding-top: 10px;
 	text-align: center;
 	color: white;
-	background-color: #3BE3FF;
+	background-color: rgba(0, 0, 0, 0.07);
 	border: 1px solid white;
 	font-size: 1.5em;
 	text-decoration: none;
@@ -182,22 +182,28 @@ footer div p a:hover{
 }
 
 .signup a{
-	height: 90px;
-	width: 260px;
-	font-family: 'Molengo';
-	background-color: black;
-	font-size: 1.25em;
-	display: inline;
-	float: left;
-	margin-right: 20px;
-	margin-left: 20px;
-	text-align: center;
-	padding-right: 0.5em;
-	padding-left: 0.5em;
-	padding-top: 2em;
-	border-radius: 3px;
-	color: white;
-	text-decoration: none;
+  height: 90px;
+  width: 260px;
+  font-family: 'Molengo';
+  background-color: rgba(0,0,0,0.3);
+  font-size: 1.25em;
+  display: inline;
+  float: left;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-align: center;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  padding-top: 2em;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+}
+
+.signup a:hover{
+	background-color: rgba(0,0,0,0.2);
+	border: 2px solid black;
 }
 
 .nurse_view{
@@ -211,7 +217,7 @@ footer div p a:hover{
 
 .nurse_display{
 	height: 400px;
-	width: 350px;
+	width: 300px;
 	background-color: white;
 	display: inline-block;
 	border: 1px solid black;
@@ -219,21 +225,24 @@ footer div p a:hover{
 	margin-left: 50px;
 	margin-right: 50px;
 	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-bottom: 50px;
+	border-radius: 5px;
 }
 
 .nurse_display_avatar{
-	border: 1px solid black;
+	margin-bottom: 10px;
 
 }
 
 .nurse_display_fname{
-	border: 1px solid black;
+	font-size: 2em;
+	margin-bottom: 10px;
 
 }
 
 .nurse_display_email{
-	border: 1px solid black;
-	
+	font-size: 1.5em;
+
+
 }
 

@@ -1,9 +1,5 @@
 class UsersController < ApplicationController
 
-def index
-
-end
-
 def new
 	@user = User.new
 end
@@ -23,14 +19,6 @@ end
 
 def create
 	@user = User.create( user_params )
-end
-
-def update
-
-end
-
-def destroy
-
 end
 
 def search
@@ -55,7 +43,5 @@ end
 def additional_params
 	params.require(:user).permit(:username, :address, :bio, :is_rn, :fname, :lname)
 end
-
-
 
 end

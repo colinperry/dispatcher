@@ -3,10 +3,10 @@
 		<% for nurse in @local_nurses do %>
 			<div class="nurse_display">
 				<div class="nurse_display_avatar">
-					<% if nurse.avatar.url(:thumb) %>
-						<%= image_tag nurse.avatar.url(:thumb) %>
+					<% if nurse.avatar.url.length != 0 %>
+						<%= image_tag nurse.avatar.url(:medium) %>
 					<% else %>
-						<img src=url("default_avatar_female.jpg")>
+						<img src="default_avatar_female.jpg">
 					<% end %>
 				</div>
 				<div class="nurse_display_fname" %>

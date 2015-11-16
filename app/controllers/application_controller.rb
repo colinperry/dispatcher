@@ -16,4 +16,8 @@ def configure_permitted_parameters
 		:avatar, :email, :password, :password_confirmation, :current_password, :address, :description)}
 end
 
+def after_sign_in_path_for(resource)
+  session[:previous_url] || search_path
+end
+
 end
